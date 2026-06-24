@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>มีไรจะถาม</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+max-width:500px;
+box-shadow:0 0 30px rgba(255,105,180,.3);
+}
+
+h1{
+color:#ff4f93;
+}
+
+p{
+font-size:24px;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff66a3;
+color:white;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="title">เพื่อนรัก 👀</h1>
+
+<p id="text">
+มีไรจะถามอะ
+</p>
+
+<button id="btn">
+เออออ
+</button>
+
+</div>
+
+<script>
+
+const pages=[
+
+"สัญญาก่อนนะ",
+"ห้ามโกรธ 😭",
+"ห้ามด่า 😭",
+"ห้ามบล็อก 😭",
+"คำถามสำคัญมาก",
+"พร้อมยัง 👀",
+"ปะป๊า 👀",
+"มาม๊า 🥺"
+
+];
+
+let page=0;
+
+const text=document.getElementById("text");
+const btn=document.getElementById("btn");
+
+btn.onclick=()=>{
+
+page++;
+
+if(page<pages.length){
+
+text.innerHTML=pages[page];
+
+}else{
+
+document.body.innerHTML=`
+
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:Arial;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+text-align:center;
+">
+
+<h1 style="font-size:70px;">
+🖕🏻😂🖕🏻
+</h1>
+
+<h2>
+พ่อมึงอะะะะะะะะ
+</h2>
+
+
+</div>
+
+`;
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
